@@ -14,6 +14,22 @@
   <name>module1</name>
   <url>http://maven.apache.org</url>
 
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>net.sf.doodleproject</groupId>
+        <artifactId>doxygen-maven-plugin</artifactId>
+        <configuration>
+          <alphabeticalIndex>true</alphabeticalIndex>
+          <generateHtml>true</generateHtml>
+          <inputDirectory>${basedir}/src/main/java</inputDirectory>
+          <filePatterns>*.java</filePatterns>
+          <recursive>true</recursive>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
   <dependencies>
     <dependency>
       <groupId>log4j</groupId>
